@@ -1,0 +1,5 @@
+<div class="checkout-list-container">
+  <app-checkout-item (onRemove)="onRemoveItem.emit()" *ngFor="let product of products"
+                     [checkoutProduct]="product" class="checkout-product">
+  </app-checkout-item>
+</div>

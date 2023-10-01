@@ -1,0 +1,19 @@
+<mat-card class="checkout-item-container">
+  <img alt="Checkout product img" height="50" mat-card-image src="{{checkoutProduct.img}}" width="60">
+  <div>
+    {{checkoutProduct.productTitle}}
+  </div>
+  <div>
+    Price: {{checkoutProduct.productPrice.toFixed(2)}}{{checkoutProduct.currency}}
+  </div>
+  <div>
+    Quantity: {{checkoutProduct.quantity}}
+  </div>
+
+  <div>
+    Total: {{checkoutProduct.subTotalPrice.toFixed(2)}}{{checkoutProduct.currency}}
+  </div>
+  <button (click)="removeProductFromCheckoutCart()" mat-icon-button>
+    <mat-icon color="warn">close</mat-icon>
+  </button>
+</mat-card>

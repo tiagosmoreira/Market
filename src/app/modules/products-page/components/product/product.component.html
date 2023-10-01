@@ -1,0 +1,26 @@
+<mat-card class="product-card">
+  <mat-card-header>
+    <mat-card-title>{{product?.productTitle}}</mat-card-title>
+    <mat-card-subtitle>${{(product?.pricePer)?.toFixed(2)}} per {{product?.unit}}</mat-card-subtitle>
+  </mat-card-header>
+  <img alt="Product img" height="250" mat-card-image src="{{product?.img}}" width="300">
+  <mat-card-content>
+    <div class="quantity-container">
+      <button (click)="decreaseQuantity()" [disabled]="quantity === 0" mat-icon-button>
+        <mat-icon>remove</mat-icon>
+      </button>
+      <div class="quantity-number">
+        {{quantity}}
+      </div>
+      <button (click)="increaseQuantity()" mat-icon-button>
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div>
+      SubTotal: ${{subTotal.toFixed(2)}}
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="addProductToCheckoutCart()" [disabled]="quantity === 0" mat-button>Add to Cart</button>
+  </mat-card-actions>
+</mat-card>

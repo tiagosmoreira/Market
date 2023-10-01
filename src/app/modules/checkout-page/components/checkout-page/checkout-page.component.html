@@ -1,0 +1,16 @@
+<div class="checkout-page-container">
+  <h1>Checkout</h1>
+  <app-checkout-list (onRemoveItem)="updateTotalValue(selected)"></app-checkout-list>
+  <div class="total-container">
+    <h2 class="total-value">
+      Total {{total.toFixed(2)}}
+    </h2>
+    <mat-form-field>
+      <mat-select [(value)]="selected" required>
+        <mat-option (click)="updateTotalValue(currency)" *ngFor="let currency of currencies" [value]="currency">
+          {{currency}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.checkout-page-container {
+  padding: 10px;
+
+  .total-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 10px;
+
+    .total-value {
+      margin-right: 20px;
+    }
+  }
+}

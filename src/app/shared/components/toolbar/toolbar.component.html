@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span>Market</span>
+
+  <div class="toolbar-buttons">
+    <button (click)="navigate('')" mat-button>Home</button>
+    <button (click)="navigate('products')" mat-button>Products</button>
+  </div>
+  <div class="checkout-button-container">
+    <button (click)="navigate('checkout')" mat-icon-button>
+      <mat-icon matBadge="{{totalProducts}}" matBadgeColor="warn">shopping_cart</mat-icon>
+    </button>
+  </div>
+
+</mat-toolbar>

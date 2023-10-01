@@ -1,0 +1,11 @@
+.checkout-list-container {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: flex-start;
+  overflow-y: auto;
+
+  .checkout-product {
+    margin-top: 20px;
+  }
+}
