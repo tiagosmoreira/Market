@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
 
+### How to run the project
+
+After installing the necessary node modules, it's possible to run the application via `npm run start`
+
 ## Project Structure
 
 According to the requisites, this project was divided in two main modules, the Products and the Checkout.
